@@ -9,7 +9,7 @@ def getDataSource(dp):
         df = csv.DictReader(d)
         for i in df:
             marks.append(float(i["Marks In Percentage"]))
-            days.append(i["Days Present"])
+            days.append(float(i["Days Present"]))
     return {"x":marks, "y":days}
 
 def findCorrelation(ds):
